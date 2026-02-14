@@ -34,6 +34,9 @@
             tile.addEventListener("dragenter", dragEnter);
             tile.addEventListener("drop", dragDrop);
             tile.addEventListener("dragend", dragEnd);
+            tile.addEventListener("touchstart", dragStart);
+            tile.addEventListener("touchmove", touchMove);
+            tile.addEventListener("touchend", touchEnd);
 
             document.getElementById("board").append(tile);
         }
@@ -57,6 +60,9 @@
         tile.addEventListener("dragenter", dragEnter);
         tile.addEventListener("drop", dragDrop);
         tile.addEventListener("dragend", dragEnd);
+        tile.addEventListener("touchstart", dragStart);
+        tile.addEventListener("touchmove", touchMove);
+        tile.addEventListener("touchend", touchEnd);
 
         document.getElementById("pieces").append(tile);
     }
@@ -92,6 +98,19 @@
 
     turns++;
     document.getElementById("turns").innerText = turns;
+  }
+
+  function touchMove(e) {
+    e.preventDefault();
+  }
+
+  function touchEnd(e) {
+      let changedTouch = e.changedTouches[0];
+      let elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
+      if (elem && elem.tagName == "IMG") {
+          otherTile = elem;
+          dragEnd();
+      }
   }
 </script>
 </html>

@@ -3,20 +3,21 @@ body{
     text-align: center;
 }
 #board{
-    width: 406.5px;
-    height: 406px;
+    width: 400px;
+    height: 400px;
     border: 2px solid purple;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 }
 #board img{
-    width: 79px;
-    height: 79px;
+    width: 80px;
+    height: 80px;
     border: 0.5px solid lightblue;
+    box-sizing: border-box;
 }
 #pieces{
-    width: 1055.9px;
+    width: 1053px;
     height: 160px;
     border: 2px solid purple;
     margin: 0 auto;
@@ -24,9 +25,10 @@ body{
     flex-wrap: wrap;
 }
 #pieces img{
-    width: 79px;
-    height: 79px;
+    width: 80px;
+    height: 80px;
     border: 0.5px solid lightblue;
+    box-sizing: border-box;
 }
 .sit{
     position: absolute;
@@ -34,4 +36,30 @@ body{
 .sit img{
     width: 300px;
     padding: 15px 0 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .sit {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+    .sit img {
+        padding: 10px 0;
+    }
+    #board {
+        margin-top: 10px;
+        width: 300px;
+        height: 300px;
+        justify-content: center;
+    }
+    #pieces {
+        width: 300px;
+        height: auto;
+        justify-content: center;
+    }
+    #board img, #pieces img {
+        width: 60px;
+        height: 60px;
+    }
 }
