@@ -1,0 +1,37 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#board{
+    width: 406.5px;
+    height: 406px;
+    border: 2px solid purple;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+#board img{
+    width: 79px;
+    height: 79px;
+    border: 0.5px solid lightblue;
+}
+#pieces{
+    width: 1055.9px;
+    height: 160px;
+    border: 2px solid purple;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+#pieces img{
+    width: 79px;
+    height: 79px;
+    border: 0.5px solid lightblue;
+}
+.sit{
+    position: absolute;
+}
+.sit img{
+    width: 300px;
+    padding: 15px 0 0 20px;
+}
