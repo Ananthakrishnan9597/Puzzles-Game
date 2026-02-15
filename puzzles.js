@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ananthakrishnan</title>
-    <link rel="stylesheet" href="puzzles.css">
-    <script src="puzzles.js"></script>
-</head>
-<body>
-    <div class="sit">
-    <img src="main image.jpg" alt="">
-    </div>
-    <br>
-    <div id="board"></div>
-    <h2>Turns: <span id="turns">0</span></h2>
-    <div id="pieces"></div>
-</body>
-<!-- <script>
-   let rows = 5;
+ let rows = 5;
    let columns = 5;
    let currTile;
    let otherTile;
@@ -113,5 +94,3 @@
           dragEnd();
       }
   }
-</script> -->
-</html>
